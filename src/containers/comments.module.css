@@ -1,0 +1,51 @@
+.wrap {
+  position        : relative;
+  display         : flex;
+  background-color: var(--color-primary);
+  width           : 100vw;
+  height          : 100vh;
+}
+
+.commentsContainer {
+  background-color: var(--color-secondary);
+  width           : 60%;
+  min-height      : 33rem;
+  max-height      : 35rem;
+  margin          : auto;
+  border-radius   : 0.5rem;
+  overflow-y      : scroll;
+  padding-bottom  : 4.5rem;
+}
+
+.inputBarContainer {
+  position: relative;
+  display : flex;
+  width   : 100%;
+}
+
+.noCommentsTitle {
+  text-align : center;
+  font-size  : larger;
+  font-weight: 500;
+  padding-top: 25%;
+}
+
+@media only screen and (max-width: 420px) {
+  .commentsContainer {
+    width         : 90%;
+    max-height    : 80vh;
+    min-height    : 77vh;
+    border-radius : 1.5rem;
+    padding-bottom: 20rem;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1000px) {
+  .commentsContainer {
+    max-height    : 80vh;
+    min-height    : 77vh;
+    border-radius : 2rem;
+    width         : 80%;
+    padding-bottom: 16rem;
+  }
+}

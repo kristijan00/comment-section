@@ -1,0 +1,182 @@
+.wrap {
+  position             : relative;
+  max-width            : 85%;
+  margin               : 2rem 0;
+  display              : grid;
+  grid-template-columns: 0.1fr 1fr;
+  overflow-x           : hidden;
+}
+
+.date {
+  padding-top: 1rem;
+  text-align : center;
+  color      : gray;
+  font-weight: 500;
+  font-size  : 0.8rem;
+}
+
+.subComment {
+  padding-left: 5rem;
+}
+
+.subComment::after {
+  position     : absolute;
+  content      : '';
+  left         : 4rem;
+  bottom       : 5.5rem;
+  height       : 2rem;
+  width        : 1rem;
+  border-bottom: 1px solid grey;
+  border-left  : 1px solid grey;
+  opacity      : 0.5;
+}
+
+/* Comment photo */
+
+.authorPhoto {
+  margin      : 0 auto;
+  padding-left: 1.5rem;
+}
+
+.authorPhoto img {
+  width : 2.5rem;
+  height: auto;
+}
+
+/*  */
+
+/* Comment content */
+.comment {
+  width      : fit-content;
+  margin-left: 1rem;
+}
+
+.commentContent {
+  background-color: white;
+  border-radius   : 0.5rem;
+  padding         : 1rem;
+  max-width       : 100%;
+}
+
+.commentContent h2 {
+  margin-bottom: 1rem;
+}
+
+.commentContent p {
+  font-weight  : lighter;
+  text-overflow: ellipsis;
+}
+
+/*  */
+
+/* Comment options */
+.commentOptions span {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.replyButton {
+  opacity   : 0.7;
+  cursor    : pointer;
+  color     : var(--color-primary);
+  transition: opacity 0.5s;
+}
+
+.replyButton:hover {
+  opacity: 1;
+}
+
+.selectedReply {
+  opacity: 1;
+}
+
+/*  */
+
+@media only screen and (max-width: 420px) {
+  .wrap {
+    height       : fit-content;
+    max-width    : 98%;
+    min-width    : 60%;
+    margin       : 2rem 0;
+    border-radius: 1rem;
+  }
+
+  .date {
+    padding-top: 1.5rem;
+    text-align : center;
+    color      : gray;
+    font-weight: 500;
+    font-size  : 2.5rem;
+  }
+
+  .authorPhoto {
+    margin      : 0 auto;
+    padding-left: 2rem;
+  }
+
+  .authorPhoto img {
+    width: 11rem;
+  }
+
+  .commentContent {
+    background-color: white;
+    border-radius   : 0.5rem;
+    padding         : 3rem;
+    font-size       : 4rem;
+  }
+
+  .commentOptions span {
+    margin   : 1rem 1rem 1rem 0;
+    font-size: 4rem;
+  }
+
+  .subComment::after {
+    bottom: 16.5rem;
+    height: 6rem;
+    width : 2rem;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1000px) {
+  .wrap {
+    height       : fit-content;
+    max-width    : 98%;
+    min-width    : 60%;
+    margin       : 2rem 0;
+    border-radius: 1.5rem;
+  }
+
+  .date {
+    padding-top: 1.5rem;
+    text-align : center;
+    color      : gray;
+    font-weight: 500;
+    font-size  : 2rem;
+  }
+
+  .authorPhoto {
+    margin      : 0 auto;
+    padding-left: 2rem;
+  }
+
+  .authorPhoto img {
+    width: 8rem;
+  }
+
+  .commentContent {
+    background-color: white;
+    border-radius   : 0.5rem;
+    padding         : 3rem;
+    font-size       : 3rem;
+  }
+
+  .commentOptions span {
+    margin   : 1rem 1rem 1rem 0;
+    font-size: 3rem;
+  }
+
+  .subComment::after {
+    bottom: 15.5rem;
+    height: 3rem;
+    width : 2rem;
+  }
+}

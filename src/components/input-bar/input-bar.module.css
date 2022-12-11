@@ -1,0 +1,157 @@
+.wrap {
+  position        : fixed;
+  display         : flex;
+  z-index         : 9999;
+  bottom          : 5rem;
+  left            : 22.5%;
+  width           : 55%;
+  background-color: white;
+  height          : 4rem;
+  border-radius   : 0.5rem;
+  box-shadow      : var(--box-shadow);
+}
+
+/* Left input icon */
+
+.icon {
+  display         : flex;
+  height          : 3.5rem;
+  width           : 3.5rem;
+  border-radius   : 0.5rem;
+  margin          : auto 0.3rem;
+  background-color: var(--color-primary);
+  cursor          : pointer;
+  transition      : opacity 0.5s;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.icon svg {
+  margin: auto;
+  width : 50%;
+  height: 50%;
+  color : white;
+}
+
+/*  */
+
+
+/* input field */
+.wrap input {
+  height   : 80%;
+  width    : 70%;
+  margin   : auto auto auto 0.5rem;
+  border   : 0px;
+  font-size: 1rem;
+}
+
+.wrap input:focus {
+  outline: none;
+}
+
+/*  */
+
+/* submit button */
+.wrap button {
+  height          : 90%;
+  margin          : auto 0.3rem;
+  background-color: var(--color-primary);
+  color           : white;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  cursor          : pointer;
+  border-radius   : 0.5rem;
+  transition      : opacity 0.5s;
+}
+
+.wrap button:hover {
+  opacity: 0.8;
+}
+
+.wrap button svg {
+  transform: rotate(-45deg);
+}
+
+/*  */
+
+@media only screen and (max-width: 420px) {
+  .wrap {
+    bottom: 7.5%;
+    width : 85%;
+    left  : 7.5%;
+    height: 13rem;
+  }
+
+  .icon {
+    height: 11rem;
+    width : 14rem;
+    margin: auto 1rem;
+    border: 1rem;
+  }
+
+  .wrap input {
+    font-size: 4rem;
+  }
+
+  .wrap button {
+    height       : 85%;
+    margin       : auto 1rem;
+    border-radius: 1rem;
+  }
+
+  .wrap button svg {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .wrap {
+    bottom: 6%;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1000px) {
+  .wrap {
+    bottom: 6.5%;
+    width : 75%;
+    left  : 12.5%;
+    height: 10rem;
+  }
+
+  .icon {
+    height       : 8rem;
+    width        : 8rem;
+    margin       : auto 1rem;
+    border-radius: 1rem;
+  }
+
+  .wrap input {
+    font-size: 3.5rem;
+  }
+
+  .wrap button {
+    height       : 85%;
+    margin       : auto 1rem;
+    border-radius: 1.5rem;
+    font-size    : 2rem;
+  }
+
+  .wrap button svg {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .wrap {
+    bottom: 4.5%;
+    left  : 21.5%;
+    width : 57%;
+  }
+
+  .wrap button {
+    font-size: 1rem;
+  }
+}
