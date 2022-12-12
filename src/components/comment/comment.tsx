@@ -50,7 +50,7 @@ const Comment: React.FC<Props> = props => {
             </div>
             {
               props.replies ?
-                props.replies.map(item => <Comment comment={item} replies={[]} selectedComment={false} />)
+                props.replies.map(item => <Comment key={item.id} comment={item} replies={[]} selectedComment={false} />)
                 :
                 null
             }
