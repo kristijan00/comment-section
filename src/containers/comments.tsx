@@ -41,7 +41,7 @@ const Comments: React.FC = () => {
     <div className={styles.wrap}>
       <div className={styles.commentsContainer}>
         {
-          parentComments.length > 0 ?
+          parentComments && parentComments.length > 0 ?
             parentComments.map((item, index) => <Comment replies={findReplies(item.id)} selectedComment={selectedComment === item.id}
               onClick={() => setSelectedComment(curr => curr === item.id ? '' : item.id)} key={item.id + index} comment={item} />)
             :

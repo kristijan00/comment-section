@@ -24,7 +24,7 @@ const Comment: React.FC<Props> = props => {
         comment ?
           <>
             {
-              props.replies.length > 0 ?
+              props.replies && props.replies.length > 0 ?
                 <h2 className={styles.date}>{new Date(comment.timestamp).toString().slice(0, 10)}</h2>
                 :
                 null
@@ -49,7 +49,7 @@ const Comment: React.FC<Props> = props => {
               </div>
             </div>
             {
-              props.replies ?
+              props.replies && props.replies.length > 0 ?
                 props.replies.map(item => <Comment key={item.id} comment={item} replies={[]} selectedComment={false} />)
                 :
                 null
